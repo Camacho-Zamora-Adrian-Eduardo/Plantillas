@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantillas</title>
+</head>
+<body>
+    <h1>Mi primer plantilla</h1>
+    <ol>
+    {% for nombre in nombres %}
+        <li>{{ nombre }}</li>
+    {% endfor %}
+    </ol>
+    <footer> 
+        <h4>Elaborado por {{creador}}</h4>
+    </footer>
+</body>
+</html>
