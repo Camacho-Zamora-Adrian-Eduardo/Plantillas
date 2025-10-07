@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    alumnos = ["Adrian Camacho", "Eduardo Zamora","Yo con otro nombre"]
-    return render_template("index.html",creador="Camacho Zamora Adrian Eduardo", nombres = alumnos)
+    
+    return render_template("index.html",creador="Camacho Zamora Adrian Eduardo")
 
 @app.route('/crearCuenta')
 def crear_cuenta():
