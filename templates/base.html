@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantillas</title>
+    
+      <title>{% block titulo %}{%endblock titulo %}</title>
+      
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Mi primer plantilla</h1>
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="http://127.0.0.1:5000/">Inicio</a>
@@ -37,13 +39,11 @@
   </div>
 </nav>
 
-<div class="text-center"><h1>Bienvenido a mi Pagina</h1></div>
-<div class="text-center"><h4><p>En esta pagina encontraras informacion sobre distintas categorias, animales exóticos, vehiculos antiguos, las maravillas del mundo y saber un poco mas del creador de esta pagina y aqui te dare un leve resumen de cada uno</p></h4></div>
 
 
     <section>
       {%block contenido%}
-      {% endblock contenido%}
+      {%endblock contenido%}
     </section>
     <footer> 
         <h6>Todos los derechos reservados</h6>
