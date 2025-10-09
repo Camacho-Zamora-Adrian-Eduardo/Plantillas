@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block titulo %}
-    Animales Exoticos
+    Vehiculos Antiguos
 {% endblock titulo %}
     
 
@@ -18,33 +18,33 @@
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card text-bg-secondary">
-                    <img src="#" class="card-img-top" alt="Ford Model T">
+                    <img src="{{ url_for('static', filename='img/ford.webp')}}" class="card-img-top" alt="Ford Model T">
                     <div class="card-body">
                         <h5 class="card-title">Ford Model T</h5>
                         <p class="card-text"><ul><li>Año aproximado:1908 – 1927</li>
                             Considerado el primer automóvil producido en masa;
-                             tenía un motor de 4 cilindros, alcanzaba unos 70 km/h,
-                              y fue diseñado para ser accesible al público.</ul></p>
+                            tenía un motor de 4 cilindros, alcanzaba unos 70 km/h,
+                            y fue diseñado para ser accesible al público.</ul></p>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4 mb-4">
                 <div class="card text-bg-secondary">
-                    <img src="#" class="card-img-top" alt="Chevrolet Bel Air">
+                    <img src="{{ url_for('static', filename='img/chev.webp')}}" class="card-img-top" alt="Chevrolet Bel Air">
                     <div class="card-body">
                         <h5 class="card-title">Chevrolet Bel Air</h5>
                         <p class="card-text"><ul><li>Año aproximado:1950s</li>
                             Auto clásico estadounidense con diseño elegante,
-                             carrocería cromada,asientos amplios y motores V8 potentes;
-                              símbolo del estilo de los años 50.</ul></p>
+                            carrocería cromada,asientos amplios y motores V8 potentes;
+                            símbolo del estilo de los años 50.</ul></p>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4 mb-4">
                 <div class="card text-bg-secondary">
-                    <img src="#" class="card-img-top" alt="Volkswagen Escarabajo">
+                    <img src="{{ url_for('static', filename='img/volk.webp')}}" class="card-img-top" alt="Volkswagen Escarabajo">
                     <div class="card-body">
                         <h5 class="card-title">Volkswagen Escarabajo (Beetle)</h5>
                         <p class="card-text"><ul><li>Año aproximado:1938 – 1979</li>
@@ -62,7 +62,7 @@
     <div class="card mb-3 col-4 text-bg-secondary">
     <div class="row g-0">
     <div class="col-md-4">
-        <img src="..." class="img-fluid rounded-start" alt="Cadillac Eldorado">
+        <img src="{{ url_for('static', filename='img/cadillac.webp')}}" class="img-fluid rounded-start" alt="Cadillac Eldorado">
     </div>
     <div class="col-md-8">
         <div class="card-body ">
@@ -80,7 +80,7 @@
     <div class="card mb-3 col-4 text-bg-secondary" >
     <div class="row g-0">
     <div class="col-md-4">
-        <img src="..." class="img-fluid rounded-start " alt="Mustang 1965">
+        <img src="{{ url_for('static', filename='img/mustang.webp')}}" class="img-fluid rounded-start " alt="Mustang 1965">
     </div>
     <div class="col-md-8">
         <div class="card-body ">

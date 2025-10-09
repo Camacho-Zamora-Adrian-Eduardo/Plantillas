@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block titulo %}
-    Animales Exoticos
+    Las Maravillas del Mundo
 {% endblock titulo %}
     
 
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card text-bg-secondary">
-                    <img src="#" class="card-img-top" alt="Chichén Itzá">
+                    <img src="{{ url_for('static', filename='img/chichen.webp')}}" class="card-img-top" alt="Chichén Itzá">
                     <div class="card-body">
                         <h5 class="card-title">Chichén Itzá</h5>
                         <p class="card-text"><ul><li>Ubicación:Yucatán, México</li>
@@ -31,7 +31,7 @@
 
             <div class="col-md-4 mb-4">
                 <div class="card text-bg-secondary">
-                    <img src="#" class="card-img-top" alt="Coliseo Romano">
+                    <img src="{{ url_for('static', filename='img/coliseo.webp')}}" class="card-img-top" alt="Coliseo Romano">
                     <div class="card-body">
                         <h5 class="card-title">El Coliseo Romano</h5>
                         <p class="card-text"><ul><li>Ubicación:Roma, Italia</li>
@@ -44,7 +44,7 @@
 
             <div class="col-md-4 mb-4">
                 <div class="card text-bg-secondary">
-                    <img src="#" class="card-img-top" alt="Estatua del Cristo Redentor">
+                    <img src="{{ url_for('static', filename='img/cristo.webp')}}" class="card-img-top" alt="Estatua del Cristo Redentor">
                     <div class="card-body">
                         <h5 class="card-title">La Estatua del Cristo Redentor</h5>
                         <p class="card-text"><ul><li>Ubicación:Río de Janeiro, Brasil</li>
@@ -61,7 +61,7 @@
     <div class="card mb-3 col-4 text-bg-secondary">
     <div class="row g-0">
     <div class="col-md-4">
-        <img src="..." class="img-fluid rounded-start" alt="La Gran Muralla China">
+        <img src="{{ url_for('static', filename='img/muralla.webp')}}" class="img-fluid rounded-start" alt="La Gran Muralla China">
     </div>
     <div class="col-md-8">
         <div class="card-body ">
@@ -79,14 +79,14 @@
     <div class="card mb-3 col-4 text-bg-secondary" >
     <div class="row g-0">
     <div class="col-md-4">
-        <img src="..." class="img-fluid rounded-start " alt="Machu Picchu">
+        <img src="{{ url_for('static', filename='img/machu.webp')}}" class="img-fluid rounded-start " alt="Machu Picchu">
     </div>
     <div class="col-md-8">
         <div class="card-body ">
         <h5 class="card-title">Machu Picchu</h5>
         <p class="card-text"><ul><li>Ubicación:Cusco, Perú</li>
             Ciudadela inca ubicada en la cima de una montaña;
-             destaca por su arquitectura de piedra y su conexión con la naturaleza..</ul></p>
+            destaca por su arquitectura de piedra y su conexión con la naturaleza..</ul></p>
         <p class="card-text"><small class="text-body-secondary"></small></p>
         </div>
     </div>
@@ -98,7 +98,7 @@
             <div class="col-2"></div>
             <div class="col-md-4 mb-4">
                 <div class="card text-bg-secondary">
-                    <img src="#" class="card-img-top" alt="Petra">
+                    <img src="{{ url_for('static', filename='img/petra.webp')}}" class="card-img-top" alt="Petra">
                     <div class="card-body">
                         <h5 class="card-title">Petra</h5>
                         <p class="card-text"><ul><li>Ubicación:Jordania</li>
@@ -111,7 +111,7 @@
 
             <div class="col-md-4 mb-4">
                 <div class="card text-bg-secondary">
-                    <img src="#" class="card-img-top" alt="Taj Mahal">
+                    <img src="{{ url_for('static', filename='img/taj.webp')}}" class="card-img-top" alt="Taj Mahal">
                     <div class="card-body">
                         <h5 class="card-title">El Taj Mahal</h5>
                         <p class="card-text"><ul><li>Ubicación:Agra, India</li>
