@@ -1,8 +1,13 @@
 from flask import Flask, render_template
 
+
 app = Flask(__name__)
 
 @app.route("/")
+def sesion():
+    return render_template("sesion.html")
+
+@app.route("/inicio")
 def inicio():
     return render_template("inicio.html")
 
