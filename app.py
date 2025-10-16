@@ -1,7 +1,9 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for, flash
 
 
 app = Flask(__name__)
+
+app.config['SECRET_KEY'] = 'una_clave_secreta_muy_larga_y_dificil_de_adivinar'
 
 @app.route("/")
 def sesion():
@@ -26,6 +28,29 @@ def maravillas():
 @app.route('/acercade')
 def acerca():
     return render_template('acerca.html')
+
+@app.route('/crear')
+def crear():
+    return render_template('crear.html')
+
+@app.route('/registrame', methods= ("GET", "POST"))
+def registro():
+    error = None
+    if request.method == "POST":
+        nombreCompleto = request.form["Nombre completo"]
+        dia = request.form["Dia"]
+        mes = request.form["Mes"]
+        año = request.form["Año"]
+        genero = request.form["Genero"]
+        correo = request.form["Correo electronico"]
+        contraseña = request.form["Nueva contraseña"]
+        
+    if error != None:
+        flash(error)
+        return render_template("crear.html")
+    else:
+        flash(f"Tu cuenta se a creado {nombre}")
+        return render_template("inicio.html")
 
 
 if __name__ == "__main__":

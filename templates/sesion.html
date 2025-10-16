@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de sesion</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
-<body>
-    <div class="row text-center"><h2>Inicio de sesion</h2></div>
+{% extends 'base.html' %}
+{% block titulo %}
+    Inicio de sesion
+{% endblock titulo %}
+
+{% block contenido %}
+    <div class="container bg-info">
+        <div class="row text-center"><h2>Inicio de sesion</h2></div>
     <form class="row text-center">
         <div class="col-4"></div>
         <div class="mb-3 col-4">
@@ -39,8 +37,7 @@
                 
                     <form action="">
             <main class="text-center"><button type="submit" class="btn-primary bg-primary">Iniciar sesion</button></main>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
-</html>
+            <div class="text-center">¿No tienes una cuenta? <a href="http://127.0.0.1:5000/crear" >crea una</a></div>
+            </div>
+{% endblock contenido %}
+    
