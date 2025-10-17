@@ -1,98 +1,108 @@
 {% extends 'base.html' %}
+
 {% block titulo %}
     Crea tu cuenta
 {% endblock titulo %}
 
 {% block contenido %}
 
-    <main class="container bg-info">
-        <h2 class="text-center">Crea una cuenta</h2>
-        <p class="text-center">Es facil y rapido</p>
-    
+<main class="container bg-info">
+    <h2 class="text-center">Crea una cuenta</h2>
+    <p class="text-center">Es fácil y rápido</p>
 
-    <form class="row text-center ">
+    
+    <form action="/registro" method="POST" class="row text-center">
+        
+        {% with messages = get_flashed:mesages() %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ 'danger ' if category == 'error' else 'danger' }} alert-dismissible f"
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" arial-label="Close"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
         <div class="col-3"></div>
         <div class="mb-3 col-6">
-            <input type="text" class="form-control" id="nombre" placeholder="Nombre completo">
+            <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" placeholder="Nombre completo" required
+            value="{{ request.form.get("nombreCompleto",'')}}">
+        </div>
+
+        
+        <div class="col-4"></div>
+        <div class="col-4">
+            <label for="fecha">Fecha de nacimiento</label>
+            <input type="date" class="form-control" id="fecha" name="fecha" required 
+            value = "{{ request.form.get("fecha",'')}}">
+        </div>
+
+        
+        <div class="col-2"></div>
+        <label for="genero">Genero</label>
+        <div class="col-3"></div>
+        <div class="col-2">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="genero" id="genero" value="hombre" required>
+                <label class="form-check-label" for="hombre">Hombre</label>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="genero" id="genero" value="mujer">
+                <label class="form-check-label" for="mujer">Mujer</label>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="genero" id="genero" value="personalizado">
+                <label class="form-check-label" for="personalizado">Personalizado</label>
+            </div>
+        </div>
+
+        
+        <div class="container-center">
+            <div class="row">
+            <div class="col-3"></div>
+        <div class="mb-3 col-6">
+            <input type="email" class="form-control" id="correo" name="correo" placeholder="Correo electrónico" required
+            value = "{{ request.form.get("correo",'')}}">
+        </div>
+        </div>
         </div>
         
-        <form class="row">
-            <div class="col-2"></div>
-            <label for="fecha">Fecha de nacimiento</label>
-            <div class="col-3"></div>
-            <div class="mb-3 col-2">
-                <input type="number" class="form-control" id="fecha" placeholder="Dia">
-            </div>
-            <div class="mb-3 col-2">
-                <input type="text" class="form-control" id="fecha" placeholder="Mes">
-            </div>
-            <div class="mb-3 col-2">
-                <input type="number" class="form-control" id="fecha" placeholder="Año">
-            </div>
-        </form>
-        <form class="row text-center">
-            <div class="col-2"></div>
-            <label for="genero">Genero</label>
-            <div class="col-3"></div>
-            <div class="mb-3 col-2">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                    <label class="form-check-label" for="radioDefault1">
-                        Hombre
-                    </label>
-                </div>
-                
-            </div>
-            <div class="mb-3 col-2">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                    <label class="form-check-label" for="radioDefault1">
-                        Mujer
-                    </label>
-                </div>
-                
-            </div>
-            <div class="mb-3 col-2">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                    <label class="form-check-label" for="radioDefault1">
-                        Personalizado
-                    </label>
-                </div>
-                
-            </div>
-        </form>
-        <form class="row">
-            <div class="col-3"></div>
-            <div class="mb-3 col-6">
-                <input type="text" class="form-control" id="text" placeholder="Correo electronico">
-            </div>
-        </form>
-        <form class="row">
-            <div class="col-3"></div>
-            <div class="mb-3 col-6">
-                <input type="text" class="form-control" id="genero" placeholder="Nueva contraseña">
-            </div>
-        </form>
+        <div class="col-3"></div>
+        <div class="mb-3 col-6">
+            <input type="password" class="form-control" id="contraseña" name="contraseña" placeholder="Nueva contraseña" required 
+            value = "{{ request.form.get("contraseña",'')}}">
+        </div>
+
+        
         <div class="row">
             <div class="col-3"></div>
             <p class="col-6">Es posible que las personas que usan nuestro servicio hayan subido tu información de
-                contacto a Facebook. <a href="#" >Más información.</a> 
+                contacto a Facebook. <a href="#">Más información.</a>
+            </p>
         </div>
-        </p>
+
         <div class="row">
             <div class="col-3"></div>
-            <p class="col-6">Al hacer clic en "Crear cuenta", aceptas nuestras <a href="#" >Condiciones</a>, la <a href="#" >Política de privacidad</a> y
-                la <a href="#" >Política de
-                cookies.</a> Es posible que te enviemos notificaciones por SMS, que puedes desactivar cuando quieras</p>
+            <p class="col-6">Al hacer clic en "Crear cuenta", aceptas nuestras <a href="#">Condiciones</a>, la
+                <a href="#">Política de privacidad</a> y la <a href="#">Política de cookies.</a> Es posible que te enviemos notificaciones por SMS, que puedes desactivar cuando quieras.
+            </p>
         </div>
 
+        
+        <div class="row">
+            <div class="col-3"></div>
+            <button type="submit" class="btn btn-success col-6">Crear cuenta</button>
+        </div>
+    </form>
 
+    >
+    <p class="text-center">
+        <a href="http://127.0.0.1:5000/">¿Ya tienes una cuenta?</a>
+    </p>
+</main>
 
-        <form action="">
-            <main class="text-center"><button type="submit" class="btn-primary bg-success">Crear cuenta</button></main>
-
-        </form>
-        <p class="text-center"> <a href="http://127.0.0.1:5000/" >¿Ya tienes una cuenta?</a> </p></main>
 {% endblock contenido %}
-    
