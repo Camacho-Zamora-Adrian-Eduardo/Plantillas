@@ -58,40 +58,33 @@
     
 <div class="row justify-content-center ">
     
-    <div class="card mb-3 col-4 text-bg-secondary">
-    <div class="row g-0">
-    <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/muralla.webp')}}" class="img-fluid rounded-start" alt="La Gran Muralla China">
-    </div>
-    <div class="col-md-8">
-        <div class="card-body ">
-        <h5 class="card-title">La Gran Muralla China</h5>
-        <p class="card-text"><ul><li>Ubicación:China</li>
-            Estructura defensiva de más de 21,000 km construida
-            para proteger al imperio chino; una de las mayores
-            obras de ingeniería humana.</ul></p>
-        <p class="card-text"><small class="text-body-secondary"></small></p>
-        </div>
-    </div>
-    </div>
-    </div>
-    
-    <div class="card mb-3 col-4 text-bg-secondary" >
-    <div class="row g-0">
-    <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/machu.webp')}}" class="img-fluid rounded-start " alt="Machu Picchu">
-    </div>
-    <div class="col-md-8">
-        <div class="card-body ">
-        <h5 class="card-title">Machu Picchu</h5>
-        <p class="card-text"><ul><li>Ubicación:Cusco, Perú</li>
-            Ciudadela inca ubicada en la cima de una montaña;
-            destaca por su arquitectura de piedra y su conexión con la naturaleza..</ul></p>
-        <p class="card-text"><small class="text-body-secondary"></small></p>
-        </div>
-    </div>
-    </div>
-    </div>
+    <div class="container my-5 ">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-md-4 mb-4">
+                <div class="card text-bg-secondary">
+                    <img src="{{ url_for('static', filename='img/muralla.webp')}}" class="card-img-top" alt="La Gran Muralla China">
+                    <div class="card-body">
+                        <h5 class="card-title">La Gran Muralla China</h5>
+                        <p class="card-text"><ul><li>Ubicación:China</li>
+                             Estructura defensiva de más de 21,000 km construida
+                            para proteger al imperio chino; una de las mayores
+                            obras de ingeniería humana.</ul></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card text-bg-secondary">
+                    <img src="{{ url_for('static', filename='img/machu.webp')}}" class="card-img-top" alt="Machu Picchu">
+                    <div class="card-body">
+                        <h5 class="card-title">Machu Picchu</h5>
+                        <p class="card-text"><ul><li>Ubicación:Cusco, Perú</li>
+                            Ciudadela inca ubicada en la cima de una montaña;
+                            destaca por su arquitectura de piedra y su conexión con la naturaleza.</ul></p>
+                    </div>
+                </div>
+            </div>
 
     <div class="container my-5 ">
         <div class="row">

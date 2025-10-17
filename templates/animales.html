@@ -59,41 +59,34 @@
     
 <div class="row justify-content-center ">
     
-    <div class="card mb-3 col-4 text-bg-secondary">
-    <div class="row g-0">
-    <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/mariposa.webp')}}" class="img-fluid rounded-start" alt="Mariposa monarca">
-    </div>
-    <div class="col-md-8">
-        <div class="card-body ">
-        <h5 class="card-title">Mariposa monarca</h5>
-        <p class="card-text"><ul><li>Tipo: Insecto</li>
-            <li>Región: Michoacán y Estado de México (santuario de hibernación)</li>
-            <li>Dato interesante: Migra más de 4,000 km desde Canadá a México cada año.</li>
-            <li>Estado de conservación: Amenazada.</li></ul></p>
-        <p class="card-text"><small class="text-body-secondary"></small></p>
-        </div>
-    </div>
-    </div>
-    </div>
-    
-    <div class="card mb-3 col-4 text-bg-secondary" >
-    <div class="row g-0">
-    <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/guajolote.webp')}}" class="img-fluid rounded-start " alt="Guajolote">
-    </div>
-    <div class="col-md-8">
-        <div class="card-body ">
-        <h5 class="card-title">Guajolote o Pavo ocelado</h5>
-        <p class="card-text"><ul><li>Tipo: Ave</li>
-        <li>Región: Península de Yucatán</li>
-        <li>Dato interesante: Es un pavo silvestre muy colorido que solo existe en esa zona.</li>
-        <li>Estado de conservación: Casi amenazado.</li></ul></p>
-        <p class="card-text"><small class="text-body-secondary"></small></p>
-        </div>
-    </div>
-    </div>
-    </div>
+    <div class="container my-5 ">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-md-4 mb-4">
+                <div class="card text-bg-secondary">
+                    <img src="{{ url_for('static', filename='img/mariposa.webp')}}" class="card-img-top" alt="Mariposa Monarca">
+                    <div class="card-body">
+                        <h5 class="card-title">Mariposa monarca</h5>
+                        <p class="card-text"><ul><li>Tipo: Insecto</li>
+                        <li>Región: Michoacán y Estado de México (santuario de hibernación)</li>
+                        <li>Dato interesante: Migra más de 4,000 km desde Canadá a México cada año.</li>
+                        <li>Estado de conservación: Amenazada.</li></ul></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card text-bg-secondary">
+                    <img src="{{ url_for('static', filename='img/guajolote.webp')}}" class="card-img-top" alt="Guajote">
+                    <div class="card-body">
+                        <h5 class="card-title">Guajolote o Pavo ocelado</h5>
+                        <p class="card-text"><ul><li>Tipo: Ave</li>
+                        <li>Región: Península de Yucatán</li>
+                        <li>Dato interesante: Es un pavo silvestre muy colorido que solo existe en esa zona.</li>
+                        <li>Estado de conservación: Casi amenazado.</li></ul></p>
+                    </div>
+                </div>
+            </div>
     
 </div>
 {% endblock contenido %}

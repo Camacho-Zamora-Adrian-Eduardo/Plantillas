@@ -59,41 +59,34 @@
     
 <div class="row justify-content-center ">
     
-    <div class="card mb-3 col-4 text-bg-secondary">
-    <div class="row g-0">
-    <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/cadillac.webp')}}" class="img-fluid rounded-start" alt="Cadillac Eldorado">
-    </div>
-    <div class="col-md-8">
-        <div class="card-body ">
-        <h5 class="card-title">Cadillac Eldorado</h5>
-        <p class="card-text"><ul><li>Año aproximado:1953 – 1970s</li>
-            Auto de lujo con interiores de cuero, dirección asistida,
-            transmisión automática y detalles cromados;
-            representaba la elegancia y el confort.</ul></p>
-        <p class="card-text"><small class="text-body-secondary"></small></p>
-        </div>
-    </div>
-    </div>
-    </div>
-    
-    <div class="card mb-3 col-4 text-bg-secondary" >
-    <div class="row g-0">
-    <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/mustang.webp')}}" class="img-fluid rounded-start " alt="Mustang 1965">
-    </div>
-    <div class="col-md-8">
-        <div class="card-body ">
-        <h5 class="card-title">Mustang 1965 (Ford Mustang)</h5>
-        <p class="card-text"><ul><li>Año aproximado:1964 – 1966</li>
-            Considerado el primer “muscle car”; diseño deportivo,
-            motor V8, tracción trasera y un sonido potente que lo
-            convirtió en un ícono del automovilismo estadounidense.</ul></p>
-        <p class="card-text"><small class="text-body-secondary"></small></p>
-        </div>
-    </div>
-    </div>
-    </div>
+    <div class="container my-5 ">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-md-4 mb-4">
+                <div class="card text-bg-secondary">
+                    <img src="{{ url_for('static', filename='img/cadillac.webp')}}" class="card-img-top" alt="auto cadillac">
+                    <div class="card-body">
+                        <h5 class="card-title">Cadillac Eldorado</h5>
+                        <p class="card-text"><ul><li>Año aproximado:1953 – 1970s</li>
+                            Auto de lujo con interiores de cuero, dirección asistida,
+                            transmisión automática y detalles cromados;
+                            representaba la elegancia y el confort.</ul></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card text-bg-secondary">
+                    <img src="{{ url_for('static', filename='img/mustang.webp')}}" class="card-img-top" alt="mustang">
+                    <div class="card-body">
+                        <h5 class="card-title">Mustang 1965 (Ford Mustang)</h5>
+                        <p class="card-text"><ul><li>Mustang 1965 (Ford Mustang)</li>
+                            Considerado el primer “muscle car”; diseño deportivo,
+                            motor V8, tracción trasera y un sonido potente que lo
+                            convirtió en un ícono del automovilismo estadounidense.</ul></p>
+                    </div>
+                </div>
+            </div>
     
 </div>
 {% endblock contenido %}
