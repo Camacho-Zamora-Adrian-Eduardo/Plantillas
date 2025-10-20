@@ -9,6 +9,7 @@ Programacion
 Emplea Framework para el Desarrollo de Software
 ## Descripcion de la actividad
 creamos una pagina web a base de plantillas enla cual se habla de animales exoticos, vehiculos antiguos, las maravillas del mundo y acerca de mi mismo
+Ademas creamos un apartado con creacion de cuenta e inicio de sesion donde se guardan los datos del usuario para su funcionamiento.
 
 
 ## Foto del alumno
