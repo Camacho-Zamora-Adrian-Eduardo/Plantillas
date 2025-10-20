@@ -11,9 +11,9 @@
     <p class="text-center">Es fácil y rápido</p>
 
     
-    <form method="POST" action="{{ url_for('register_user') }}"  class="row text-center">
+    <form method="POST" action="{{ url_for('registro') }}"  class="row text-center">
         
-        {% with messages = get_flashed:messages(with_categories=true) %}
+        {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
                 {% for category, message in messages %}
                     <div class="alert alert-{{ 'danger ' if category == 'error' else 'danger' }} alert-dismissible fade show"
