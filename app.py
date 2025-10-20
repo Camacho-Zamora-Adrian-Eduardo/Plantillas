@@ -37,19 +37,17 @@ def crear():
 def registro():
     error = None
     if request.method == "POST":
-        nombreCompleto = request.form["Nombre completo"]
-        dia = request.form["Dia"]
-        mes = request.form["Mes"]
-        año = request.form["Año"]
-        genero = request.form["Genero"]
-        correo = request.form["Correo electronico"]
-        contraseña = request.form["Nueva contraseña"]
+        nombreCompleto = request.form["nombreCompleto"]
+        fecha = request.form["fecha"]
+        genero = request.form["genero"]
+        correo = request.form["correo"]
+        contraseña = request.form["contraseña"]
         
     if error != None:
         flash(error)
         return render_template("crear.html")
     else:
-        flash(f"Tu cuenta se a creado {nombre}")
+        flash(f"Tu cuenta se a creado {nombreCompleto}")
         return render_template("inicio.html")
 
 
