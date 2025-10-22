@@ -10,6 +10,7 @@ Emplea Framework para el Desarrollo de Software
 ## Descripcion de la actividad
 creamos una pagina web a base de plantillas enla cual se habla de animales exoticos, vehiculos antiguos, las maravillas del mundo y acerca de mi mismo
 Ademas creamos un apartado con creacion de cuenta e inicio de sesion donde se guardan los datos del usuario para su funcionamiento.
+Para entrar en el apartado de creacion de cuenta se debe de seleccionar en la zona baja de la pagina en "crea una" a un lado de "¿tienes una cuenta?"
 
 
 ## Foto del alumno
