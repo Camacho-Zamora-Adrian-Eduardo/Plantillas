@@ -6,8 +6,35 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'una_clave_secreta_muy_larga_y_dificil_de_adivinar'
 
 @app.route("/")
-def sesion():
+def session():
+    if session.get('logueado') == True:
+        
     return render_template("sesion.html")
+
+@app.route('/validasesion' methods=['GET','POST'])
+def validasesion():
+    
+    
+        password = request.form.get('password','')
+        # Validad credenciales
+        if not email or not password:
+            flash('Por favor ingresa email y contraseña','error')
+        elif email in USUARIOS_REGISTRADOS:
+            usuario = USUARIOS_REGISTRADOS[email]
+            if usuario['paswword'] == password:
+                # Credenciales correctas
+                session['usuario_email'] = email
+                session['usuario'] = usuario['nombre']
+                session['logueado'] = True
+                
+                return redirect(url_for('inicio'))
+            else:
+                flash('Contraseña incorrecta','error')
+        else:
+            flash('Usuario no encontrado','error')
+            
+            return render_template('sesion.html')
+        
 
 @app.route("/inicio")
 def inicio():
