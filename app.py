@@ -1,27 +1,35 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, session
 
 
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'una_clave_secreta_muy_larga_y_dificil_de_adivinar'
 
+USUARIOS_REGISTRADOS = {
+    "adrian@cetis.edu.mx": {"nombre": "Adrian Camacho", "password": "Cetis61"}
+}
+
 @app.route("/")
-def session():
-    if session.get('logueado') == True:
-        
+def index():
+    return render_template("inicio.html")
+
+
+@app.route("/inicioDeSesion")
+def inisioSesion():
     return render_template("sesion.html")
 
-@app.route('/validasesion' methods=['GET','POST'])
+@app.route('/validaSesion', methods=['GET','POST'])
 def validasesion():
     
-    
+    if request.method == "POST":
+        email = request.form.get('email','').strip()
         password = request.form.get('password','')
         # Validad credenciales
         if not email or not password:
             flash('Por favor ingresa email y contraseña','error')
         elif email in USUARIOS_REGISTRADOS:
             usuario = USUARIOS_REGISTRADOS[email]
-            if usuario['paswword'] == password:
+            if usuario['password'] == password:
                 # Credenciales correctas
                 session['usuario_email'] = email
                 session['usuario'] = usuario['nombre']
@@ -35,6 +43,7 @@ def validasesion():
             
             return render_template('sesion.html')
         
+
 
 @app.route("/inicio")
 def inicio():
@@ -68,7 +77,7 @@ def registro():
         fecha = request.form["fecha"]
         genero = request.form["genero"]
         correo = request.form["correo"]
-        contraseña = request.form["contraseña"]
+        password = request.form["contraseña"]
         
     if error != None:
         flash(error)
