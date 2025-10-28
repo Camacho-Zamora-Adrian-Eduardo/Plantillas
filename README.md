@@ -12,7 +12,9 @@ creamos una pagina web a base de plantillas enla cual se habla de animales exoti
 Ademas creamos un apartado con creacion de cuenta e inicio de sesion donde se guardan los datos del usuario para su funcionamiento.
 Para entrar en el apartado de creacion de cuenta se debe de seleccionar en la zona baja de la pagina en "crea una" a un lado de "¿tienes una cuenta?"
 
+Se actualizo en inicio de sesion por lo cual al momento de iniciar sesion de manera correcta con el correo adrian@cetis.edu.mx y la contraseña Cetis61 se iniciara sesion en la pagina renviandote al apartado de inicio
 
+Al poner un correo o contraseña incorrecta no sucedera nada, no puse los mensaje de error pero la pagina no te aceptara el correo o contraseña
 ## Foto del alumno
 
 ![foto](https://github.com/user-attachments/assets/c33a756f-1023-4e49-b298-5d3dd0f26176)
